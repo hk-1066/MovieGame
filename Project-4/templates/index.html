@@ -2,43 +2,11 @@
 {% block title %}
     Good Question!
 {% endblock %}
-{% block content %}
-<div class="pure-g">
-    <div class="pure-u-1-5">
-        <h1>Good <br> Question!</h1>
-        {% if g.user %}
-            <form action="/logout?url={{ request.path }}" method="get" class="pure-form pure-form-stacked">
-                <button type="submit" class="pure-button">Log Out</button>
-            </form>
-            <p>You are logged in as {{ g.user.login }}. </p>
-            <form action="/ask" method="get" class="pure-form pure-form-stacked">
-                <button type="submit" class="pure-button">Ask!</button>
-            </form>
-        {% else %}
-            <form action="/login?url={{ request.path }}" method="get" class="pure-form pure-form-stacked">
-                <button type="submit" class="pure-button">Login</button>
-            </form>
-        {% endif %}
-    </div>
+{% block onefifth%}
 
-    <div class="pure-u-4-5">
-        <h1>Look at these Good Questions! </h1>
-
-        {% for items in questions %}
-            <article class = "spacing" id="round">
-            <a class = "h1" href = "/question/{{items.id}}"> <h1>{{ items.title_Q }}</h1></a>
-                <p class = "wrapped"> {{ items.text_Q }}</p>
-                <div>{{commentnum[loop.index0] }} Answer(s)</div>
-                <div class="tags">
-                {% set comma = joiner(', ') %}
-                    <p>Tagged with
-                    {% for tag in items.tags %}{{ comma() }}
-                    <a href="{{ url_for('show_tag', tag=tag.tag) }}">{{ tag.tag }}</a>
-                {%- endfor %}{# The '-' after '%' eats excess space #}</p>
-                </div>
-                <div class="timestamp">Posted by {{ items.username_Q }} at {{ items.timestamp_Q }}</div>
-            </article>
-        {% endfor %}
-    </div>
-</div>
 {% endblock %}
+
+{% block fourfifth%}
+    testTwo
+{% endblock %}
+
