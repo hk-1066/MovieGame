@@ -1,0 +1,33 @@
+STATIC.js
+	lobby (wait for 2nd player)
+	game (play game)
+		JOIN ROOM
+		GET GENRE
+		GET INPUTS
+		USER API GET DATA
+		COMPARE DATA
+TEMP.html
+	index
+	login
+	lobby
+	gameboard
+OTHER.py
+	init (3)
+	manage (1)
+	models (4)
+		USER
+			id
+			username
+			passwork
+		GAME
+			id
+			genre
+			winnerId
+			loserId
+	MovieGame (2)
+	view (4)
+		INDEX
+		LOGIN
+		ENTERGAME
+	
+	
