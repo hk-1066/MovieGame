@@ -3,6 +3,30 @@
 {% block title %}
     index
 {% endblock %}
+
 {% block content %}
-    hello world
+    <div id="login" class="show">
+{#    <div id="login">#}
+    <form action="/login" method="post">
+        <input type="text" placeholder="username" name="uName"><br>
+        <input type="password" placeholder="password" name="pWord"><br>
+        <input type="submit" value="login">
+    </form>
+
+    <br>
+        {# this should us js to hide /login and make visible newUser  6/6#}
+        <input type="button" id="newUser" value="new user">
+    </div>
+
+    <div id="createUser" class="no-show" >
+{#    <div id="createUser">#}
+    <form action="/newUser" method="post">
+        <input type="text" placeholder="username" name="uName"><br>
+        <input type="password" placeholder="password" name="pWord1"><br>
+        <input type="password" placeholder="retype password" name="pWord2"><br>
+        <input type="submit" value="create">
+    </form>
+    </div>
+
+    <script src="../static/login_creatNew.js" async></script>
 {% endblock %}
