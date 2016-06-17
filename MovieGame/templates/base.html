@@ -6,24 +6,22 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/pure/0.6.0/pure-min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontawesome/4.6.1/css/font-awesome.min.css">
     <link rel="stylesheet" href="/static/styles.css">
-    <script src="https://cdn.jsdelivr.net/jquery/2.2.3/jquery.min.js">
-    </script>
+    <script src="https://cdn.jsdelivr.net/jquery/2.2.3/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/socket.io-client/1.3.2/socket.io.min.js"></script>
 
 </head>
 <body>
-<div class="pure-g-1-5">
-    {% block onefifth %}
-       add content
+<div class="splitLeft">
+    {% block splitLeft %}
+        splitLeft empty
     {% endblock %}
 </div>
 
-<div class="pure-g-4-5">
-    {% block fourfifth %}
-
+<div class="splitRight">
+    {% block splitRight %}
+        splitRight empty
     {% endblock %}
 </div>
 
-</div>
 </body>
 </html>

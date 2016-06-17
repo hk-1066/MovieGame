@@ -4,13 +4,13 @@
     login
 {% endblock %}
 
-{% block content %}
-    <form action="/index">
+{% block splitRight %}
+    <form action="/">
         <input type="submit" value="logout"><br>
     </form>
 
     <form>
-        <input type="text" name="title" placeholder="Movie title">
+        <input type="text" placeholder="movie title" name="mTitle">
         <input type="submit" value="search"><br>
     </form>
 {% endblock %}

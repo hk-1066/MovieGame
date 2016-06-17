@@ -5,3 +5,13 @@
 .show{
     display: block;
 }
+
+.splitLeft{
+    float: left;
+    width: 25%;
+}
+
+.splitRight{
+    float: right;
+    width: 75%;
+}

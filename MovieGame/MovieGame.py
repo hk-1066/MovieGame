@@ -1,4 +1,5 @@
 from init import  app, socketio
+import api
 import view
 
 # @app.route('/')

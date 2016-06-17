@@ -4,9 +4,8 @@
     index
 {% endblock %}
 
-{% block content %}
+{% block splitLeft %}
     <div id="login" class="show">
-{#    <div id="login">#}
     <form action="/login" method="post">
         <input type="text" placeholder="username" name="uName"><br>
         <input type="password" placeholder="password" name="pWord"><br>
@@ -14,12 +13,10 @@
     </form>
 
     <br>
-        {# this should us js to hide /login and make visible newUser  6/6#}
         <input type="button" id="newUser" value="new user">
     </div>
 
     <div id="createUser" class="no-show" >
-{#    <div id="createUser">#}
     <form action="/newUser" method="post">
         <input type="text" placeholder="username" name="uName"><br>
         <input type="password" placeholder="password" name="pWord1"><br>
@@ -27,6 +24,20 @@
         <input type="submit" value="create">
     </form>
     </div>
+    <script src="../static/login_createNew.js" async></script>
+{% endblock %}
 
-    <script src="../static/login_creatNew.js" async></script>
+{% block splitRight %}
+    <div>
+    <form action="/">
+        <input type="submit" value="logout">
+        this will need to be REMOVED after testing for security<br>
+    </form>
+
+    <div class="movieSearch">
+        <input type="text" placeholder="movie title" name="mTitle">
+        <input type="submit" value="search"><br>
+    </div>
+    </div>
+    <script src="../static/getMovie.js" async></script>
 {% endblock %}
